@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f7eee8" />
+    <meta
+      name="description"
+      content="A little love note, a favorite song, and a moment just for you."
+    />
+    <title>Songs for you ♡</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="./app.js" defer></script>
+  </head>
+  <body>
+    <main>
+      <section class="scene intro-scene" id="intro" aria-labelledby="intro-title">
+        <div class="flower-bloom" id="flower-bloom" aria-hidden="true">
+          <picture class="flower-bloom-picture">
+            <source media="(max-width: 560px)" srcset="./flowers-mobile.svg" />
+            <img class="flower-bloom-art" src="./flowers.svg" alt="" />
+          </picture>
+          <span class="bloom-petal bloom-petal-one"></span>
+          <span class="bloom-petal bloom-petal-two"></span>
+          <span class="bloom-petal bloom-petal-three"></span>
+          <span class="bloom-petal bloom-petal-four"></span>
+          <span class="bloom-petal bloom-petal-five"></span>
+        </div>
+        <div class="paper-grain" aria-hidden="true"></div>
+        <div class="floating-details" aria-hidden="true">
+          <span class="floating-petal petal-one"></span>
+          <span class="floating-petal petal-two"></span>
+          <span class="floating-petal petal-three"></span>
+          <span class="floating-heart heart-one">♡</span>
+          <span class="floating-heart heart-two">♡</span>
+        </div>
+        <div class="ambient ambient-one" aria-hidden="true"></div>
+        <div class="ambient ambient-two" aria-hidden="true"></div>
+        <div class="intro-frame">
+          <p class="eyebrow intro-eyebrow">a little something, just for you</p>
+          <h1 class="intro-title" id="intro-title">From my heart <span>to yours</span></h1>
+          <p class="intro-subtitle">A small pause in your day, wrapped up with love.</p>
+
+          <div class="letter-stage">
+            <svg class="flower flower-left" viewBox="0 0 120 150" aria-hidden="true">
+              <path d="M56 146C61 112 56 85 43 63M57 115c18-21 32-28 48-30-8 20-23 32-46 37M49 93C33 78 23 62 22 42c17 10 29 25 34 48" />
+              <path class="leaf" d="M58 115c18-21 32-28 48-30-8 20-23 32-46 37M49 93C33 78 23 62 22 42c17 10 29 25 34 48" />
+              <g class="blossom">
+                <ellipse cx="70" cy="31" rx="8" ry="15" />
+                <ellipse cx="70" cy="31" rx="8" ry="15" transform="rotate(60 70 31)" />
+                <ellipse cx="70" cy="31" rx="8" ry="15" transform="rotate(120 70 31)" />
+                <circle cx="70" cy="31" r="5" />
+              </g>
+            </svg>
+            <svg class="flower flower-right" viewBox="0 0 120 150" aria-hidden="true">
+              <path d="M62 145c-3-33 3-60 17-82M61 114c-18-20-34-26-50-26 8 20 24 31 48 34M69 92c15-16 24-31 24-51-17 11-28 26-31 49" />
+              <path class="leaf" d="M61 114c-18-20-34-26-50-26 8 20 24 31 48 34M69 92c15-16 24-31 24-51-17 11-28 26-31 49" />
+              <g class="blossom rose-blossom">
+                <ellipse cx="49" cy="28" rx="8" ry="15" />
+                <ellipse cx="49" cy="28" rx="8" ry="15" transform="rotate(60 49 28)" />
+                <ellipse cx="49" cy="28" rx="8" ry="15" transform="rotate(120 49 28)" />
+                <circle cx="49" cy="28" r="5" />
+              </g>
+            </svg>
+            <div class="envelope-wrap">
+              <div class="envelope-shadow" aria-hidden="true"></div>
+              <div class="envelope" id="envelope">
+                <div class="envelope-back"></div>
+                <div class="letter-peek">
+                  <span class="letter-monogram">for you,</span>
+                  <span class="letter-heart">♡</span>
+                </div>
+                <div class="envelope-front"></div>
+                <div class="envelope-flap"></div>
+                <div class="envelope-seal" aria-hidden="true">♡</div>
+              </div>
+            </div>
+            <span class="tiny-star star-one" aria-hidden="true">✳</span>
+            <span class="tiny-star star-two" aria-hidden="true">✧</span>
+            <span class="tiny-star star-three" aria-hidden="true">✳</span>
+          </div>
+
+          <button class="button button-primary open-letter" id="open-letter" type="button" aria-expanded="false" aria-controls="note-card">
+            <span>Open your letter</span>
+            <span class="button-heart" aria-hidden="true">♡</span>
+          </button>
+          <p class="tap-hint" id="intro-hint" aria-live="polite">A little surprise is waiting inside</p>
+
+          <article class="note-card" id="note-card" aria-hidden="true">
+            <p class="note-kicker">my favorite kind of feeling</p>
+            <p class="note-copy">Some songs feel like a soft place to land.<br />I saved one for you.</p>
+            <div class="note-signature">with love <span>♡</span></div>
+            <button class="button button-secondary" id="go-to-song" type="button" tabindex="-1">
+              <span>Come listen with me</span>
+              <span aria-hidden="true">→</span>
+            </button>
+          </article>
+        </div>
+        <p class="page-note">made with a little extra love <span aria-hidden="true">♡</span></p>
+      </section>
+
+      <section class="scene music-scene" id="music" aria-labelledby="music-title" hidden>
+        <div class="paper-grain" aria-hidden="true"></div>
+        <div class="floating-details" aria-hidden="true">
+          <span class="floating-petal petal-one"></span>
+          <span class="floating-petal petal-two"></span>
+          <span class="floating-petal petal-three"></span>
+          <span class="floating-heart heart-one">♡</span>
+          <span class="floating-heart heart-two">♡</span>
+        </div>
+        <div class="ambient ambient-one" aria-hidden="true"></div>
+        <div class="ambient ambient-two" aria-hidden="true"></div>
+        <div class="music-layout">
+          <header class="music-heading">
+            <p class="eyebrow">a keepsake from my heart</p>
+            <h1 id="music-title">Songs for you <span aria-hidden="true">♡</span></h1>
+            <p class="heading-subtitle">A little melody, just for you.</p>
+          </header>
+
+          <div class="music-card">
+            <div class="card-flower" aria-hidden="true">
+              <svg viewBox="0 0 132 132">
+                <path d="M64 130c4-26 1-47-11-68M64 102c15-17 29-23 45-22-7 18-21 28-43 31M58 82C43 68 35 54 35 37c15 9 25 23 30 43" />
+                <path class="leaf" d="M64 102c15-17 29-23 45-22-7 18-21 28-43 31M58 82C43 68 35 54 35 37c15 9 25 23 30 43" />
+                <g class="blossom">
+                  <ellipse cx="76" cy="27" rx="7" ry="13" />
+                  <ellipse cx="76" cy="27" rx="7" ry="13" transform="rotate(60 76 27)" />
+                  <ellipse cx="76" cy="27" rx="7" ry="13" transform="rotate(120 76 27)" />
+                  <circle cx="76" cy="27" r="4" />
+                </g>
+              </svg>
+            </div>
+            <div class="cassette-area" aria-label="Illustration of a vintage cassette tape">
+              <div class="cassette">
+                <div class="cassette-topline">
+                  <span>STEREO · CHROME</span>
+                  <span class="cassette-dots" aria-hidden="true">● ● ●</span>
+                </div>
+                <div class="cassette-label">
+                  <span class="label-number">SIDE A <span>·</span> 01</span>
+                  <span class="label-title">love me not</span>
+                  <span class="label-artist">RAVYN LENAE</span>
+                  <span class="label-rule"></span>
+                </div>
+                <div class="cassette-window">
+                  <div class="reel reel-left"><span></span><i></i></div>
+                  <div class="tape-bridge"><span></span></div>
+                  <div class="reel reel-right"><span></span><i></i></div>
+                </div>
+                <div class="cassette-bottom">
+                  <span>MADE WITH LOVE</span>
+                  <span class="cassette-heart">♡</span>
+                  <span>90 MIN · TYPE II</span>
+                </div>
+              </div>
+              <span class="cassette-spark cassette-spark-one" aria-hidden="true">✧</span>
+              <span class="cassette-spark cassette-spark-two" aria-hidden="true">✳</span>
+            </div>
+
+            <div class="track-meta">
+              <div>
+                <p class="track-label">a song for this moment</p>
+                <h2>Love Me Not</h2>
+                <p class="track-artist">Ravyn Lenae</p>
+              </div>
+              <div class="visualizer" aria-hidden="true">
+                <span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+              </div>
+            </div>
+
+            <div class="player-controls">
+              <div class="timeline-row">
+                <span class="time-current" id="current-time">0:00</span>
+                <label class="sr-only" for="seek">Seek through Love Me Not</label>
+                <input id="seek" class="seek-slider" type="range" min="0" max="1000" value="0" step="1" />
+                <span class="time-total" id="duration">0:00</span>
+              </div>
+              <div class="transport-row">
+                <span class="track-side-note">a keepsake for you</span>
+                <button class="play-button" id="play-button" type="button" aria-label="Play Love Me Not" aria-pressed="false">
+                  <svg class="play-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.8c0-.7.8-1.1 1.4-.7l9.1 6a1.1 1.1 0 0 1 0 1.8l-9.1 6c-.6.4-1.4 0-1.4-.7V5.8Z" /></svg>
+                  <svg class="pause-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7.5 5.5h3.2v13H7.5zm5.8 0h3.2v13h-3.2z" /></svg>
+                </button>
+                <div class="volume-control">
+                  <label class="sr-only" for="volume">Volume</label>
+                  <span class="volume-icon" aria-hidden="true">♪</span>
+                  <input id="volume" class="volume-slider" type="range" min="0" max="1" value="0.75" step="0.01" />
+                </div>
+              </div>
+              <p class="player-status" id="player-status" role="status" aria-live="polite">
+                Loading song…
+              </p>
+            </div>
+          </div>
+
+          <p class="handwritten-caption">press play & let the world wait a little <span>♡</span></p>
+          <button class="back-link" id="back-to-letter" type="button"><span aria-hidden="true">←</span> back to your letter</button>
+        </div>
+        <p class="page-note">always thinking of you <span aria-hidden="true">♡</span></p>
+      </section>
+    </main>
+
+    <audio id="audio" src="./music/love-me-not.mp3" preload="metadata">
+      Your browser does not support audio playback.
+    </audio>
+  </body>
+</html>
